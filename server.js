@@ -28,7 +28,15 @@ const port=8000;
 const server = app.listen(port, ()=>{console.log(`running on localhost: ${port}`)});
 
 
-app.get("/get",function(req,res){
+app.get("/data",function(req,res){
     res.send(projectData);
     });
-    
+
+
+app.post("/adddata",function(req,res){
+    projectData.temp=req.body.temp;
+    projectData.data=req.body.data;
+    projectData.content=req.body.content;
+    console.log(projectData);
+    });
+        
