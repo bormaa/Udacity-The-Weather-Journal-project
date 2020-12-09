@@ -61,7 +61,7 @@ document.getElementById("generate").addEventListener("click", function(e) {
         postobject.date=newDate;
         postobject.content=feeling;
         postData("/adddata",postobject).then(function(){
-            UpdateUI();
+            updateUI();
         })
     })
 
